@@ -53,7 +53,7 @@ public class Recursividaad {
       
       // EJERCICIO 2
       
-      class nodo{ //
+      class nodo{ //se crea la clase nodo 
           String palabra;
           nodo siguiente;
       
@@ -64,7 +64,7 @@ public class Recursividaad {
         }
       }  
       
-      class ListaCircular{
+      class ListaCircular{ //creacion de la clase listacircular
           nodo cabeza;
           
           public ListaCircular(){
@@ -87,11 +87,11 @@ public class Recursividaad {
                     nuevoNodo.siguiente = cabeza;
                     }
             }
-                private String concatenarPalabrasRecursivo(nodo nodoActual, nodo nodoInicio) { // funcion recursiva para concatenar las palabras 
+                private String concatenarPalabrasRecursivamente(nodo nodoActual, nodo nodoInicio) { // funcion recursiva para concatenar las palabras 
                     if (nodoActual.siguiente == nodoInicio) { // Caso base si hemos llegado de nuevo al inicio
                     return nodoActual.palabra;
                     } else {
-                    return nodoActual.palabra + " " + concatenarPalabrasRecursivo(nodoActual.siguiente, nodoInicio);
+                    return nodoActual.palabra + " " + concatenarPalabrasRecursivamente(nodoActual.siguiente, nodoInicio);
                     }
                 }
                 
@@ -99,11 +99,27 @@ public class Recursividaad {
                     if (cabeza == null){
                     return "";
                     }
-                    return concatenarPalabrasRecursivo(cabeza, cabeza);
-        }
-                
+                    return concatenarPalabrasRecursivamente(cabeza, cabeza);
+                }
+      }
+                ListaCircular lista = new ListaCircular(); // se crea un constructor de la clase listacircular para agregar los elementos a la lista
+        
+                // se  agregan las palabras a la lista circular
+                lista.agregar("hola");
+                lista.agregar("profe");
+                lista.agregar("como");
+                lista.agregar("esta?");
+                lista.agregar("esto");
+                lista.agregar("lo");
+                lista.agregar("estoy");
+                lista.agregar("haciendo");
+                lista.agregar("sin");
+                lista.agregar("luz");
+                lista.agregar("jajajajajaj");
 
-        }
+                // se concatenan las palabras y se muestra el resultado
+                String resultado = lista.concatenarPalabras();
+                System.out.println("el resultado de la concatenacion es: " + resultado);   
     }
 }
  
