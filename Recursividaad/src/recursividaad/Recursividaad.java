@@ -122,7 +122,7 @@ public class Recursividaad {
                 System.out.println("el resultado de la concatenacion es: " + resultado);   */
       
      //EJERCICIO 3
-     class nodo{ 
+     /* class nodo{ 
          String valor;
          nodo siguiente;
          
@@ -182,6 +182,30 @@ public class Recursividaad {
         
         System.out.println("libros ingresados a la pila invertidos: "); //se imprimen los valores de la pila invertidos, en este caso se muestran de igual manera en la que se ingresan los datos recordando que en las pilas el primero que entra es el ultimo que sale
         Pila.pilaInvertida();                                 // con el metodo recursivo seria el primero que entra es el primero a mostrar, por esa razon se muestran en el mismo orden en que fueron ingresados, funcionando como una cola basicamente 
+        */
+     
+     //EJERCICIO 4
+       
+     }
+        public static long factorial(int n) { //funcion para calcular el factorial de manera recurssiva 
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1); 
+        }
     }
+        public static long potencia(int base, int exponente) { //funcion para calcular la potencia de un numero de forma recursiva
+            if (exponente == 0) {
+                return 1; 
+            } else {
+                return base * potencia(base, exponente - 1); 
+            }
+        }    
+        public static long factorialypotencia(int numerofactorial, int base, int exponente) {  //funcion para calcular la multiplicación de A y B
+            long factorial = factorial(numerofactorial); 
+            long potencia = potencia(base, exponente); 
+            return factorial * potencia; 
+        }
+    
 }
  
