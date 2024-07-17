@@ -42,7 +42,7 @@ public class Recursividaad {
        
     }
          public static int SumaArreglo(int[] arreglo, int indice) {
-        // Caso base: si el indice es menor que 0, significa que hemos terminado de sumar
+        // Caso base si el indice es menor que 0, significa que hemos terminado de sumar
         if (indice < 0) {
             return 0;
         } else {
@@ -87,6 +87,22 @@ public class Recursividaad {
                     nuevoNodo.siguiente = cabeza;
                     }
             }
+                private String concatenarPalabrasRecursivo(nodo nodoActual, nodo nodoInicio) { // funcion recursiva para concatenar las palabras 
+                    if (nodoActual.siguiente == nodoInicio) { // Caso base si hemos llegado de nuevo al inicio
+                    return nodoActual.palabra;
+                    } else {
+                    return nodoActual.palabra + " " + concatenarPalabrasRecursivo(nodoActual.siguiente, nodoInicio);
+                    }
+                }
+                
+                public String concatenarPalabras(){ // funcion para iniciar la concatenacion recursivamenre 
+                    if (cabeza == null){
+                    return "";
+                    }
+                    return concatenarPalabrasRecursivo(cabeza, cabeza);
+        }
+                
+
         }
     }
 }
