@@ -53,7 +53,7 @@ public class Recursividaad {
       
       // EJERCICIO 2
       
-      class nodo{
+      class nodo{ //
           String palabra;
           nodo siguiente;
       
@@ -64,7 +64,30 @@ public class Recursividaad {
         }
       }  
       
-      
-      
+      class ListaCircular{
+          nodo cabeza;
+          
+          public ListaCircular(){
+              cabeza = null;
+          }
+ 
+            public void agregar(String palabra) {
+   
+            nodo nuevoNodo = new nodo(palabra);
+            
+                if (cabeza == null) {
+                cabeza = nuevoNodo;
+                cabeza.siguiente = cabeza;
+                } else {
+                    nodo actual = cabeza;
+                    while (actual.siguiente != cabeza) {
+                    actual = actual.siguiente;
+                }
+                    actual.siguiente = nuevoNodo;
+                    nuevoNodo.siguiente = cabeza;
+                    }
+            }
+        }
     }
-}  
+}
+ 
