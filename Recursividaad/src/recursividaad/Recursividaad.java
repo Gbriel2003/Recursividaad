@@ -185,7 +185,56 @@ public class Recursividaad {
         */
      
      //EJERCICIO 4
+       Scanner entrada = new Scanner(System.in);
        
+       int numerofactorial = 0;
+       while (true){
+           System.out.println("Ingrese el numero para calcular el factorial (tiene que ser un numero entero positivo):  ");
+           if (entrada.hasNextInt()){
+               numerofactorial = entrada.nextInt();
+               if (numerofactorial >= 0){
+                   break;
+               } else {
+                   System.out.println("ingrese un numero entero positivo");
+               }
+           }else {
+               System.out.println("enttrada invalida, ingrese un numero valido");
+               entrada.next();
+           }
+       }
+       
+       int base = 0;
+       while(true){
+           System.out.println("ingrese la base para calcular la potencia (numero entero): ");
+           if (entrada.hasNextInt()){
+           base = entrada.nextInt();
+           break;
+          } else {
+               System.out.println("entrada invalida, ingrese un numero valido (entero) ");
+               entrada.next();
+           }
+       }
+       
+       // solicitar al usuario el valor para el exponente de la potencia
+        int exponente = 0;
+        while (true) {
+            System.out.print("Ingrese el exponente para calcular la potencia (entero): ");
+            if (entrada.hasNextInt()) {
+                exponente = entrada.nextInt();
+                break; // Valor válido ingresado, salir del bucle
+            } else {
+                System.out.println("Entrada no válida. Por favor, ingrese un número entero.");
+                entrada.next(); // Descartar la entrada no válida
+            }
+        }
+
+        // ccalcular la multiplicación de A y B
+        long resultado = factorialypotencia(numerofactorial, base, exponente);
+
+        // Imprimir el resultado
+        System.out.println("El resultado de " + numerofactorial + "! * " + base + "^" + exponente + " es: " + resultado);
+
+        entrada.close();
      }
         public static long factorial(int n) { //funcion para calcular el factorial de manera recurssiva 
         if (n == 0) {
