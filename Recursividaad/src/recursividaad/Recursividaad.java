@@ -167,8 +167,21 @@ public class Recursividaad {
          }  
      }
      
-     
-     
+        pila Pila = new pila(); //constructor de la clase pila 
+        
+        Pila.apilar("libro uno"); // se agregan valores ( libros ) a la pila 
+        Pila.apilar("libro dos");
+        Pila.apilar("libro tres");
+        Pila.apilar("libro cuatro");
+        Pila.apilar("libro cinco");
+        Pila.apilar("libro seis");
+        Pila.apilar("libro siete");
+        Pila.apilar("libro ocho");
+        Pila.apilar("libro nueve");
+        Pila.apilar("libro diez");
+        
+        System.out.println("libros ingresados a la pila invertidos: "); //se imprimen los valores de la pila invertidos, en este caso se muestran de igual manera en la que se ingresan los datos recordando que en las pilas el primero que entra es el ultimo que sale
+        Pila.pilaInvertida();                                 // con el metodo recursivo seria el primero que entra es el primero a mostrar, por esa razon se muestran en el mismo orden en que fueron ingresados, funcionando como una cola basicamente 
     }
 }
  
