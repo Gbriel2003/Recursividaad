@@ -53,7 +53,7 @@ public class Recursividaad {
       
       // EJERCICIO 2
       
-      class nodo{ //se crea la clase nodo 
+      /* class nodo{ //se crea la clase nodo 
           String palabra;
           nodo siguiente;
       
@@ -119,7 +119,46 @@ public class Recursividaad {
 
                 // se concatenan las palabras y se muestra el resultado
                 String resultado = lista.concatenarPalabras();
-                System.out.println("el resultado de la concatenacion es: " + resultado);   
+                System.out.println("el resultado de la concatenacion es: " + resultado);   */
+      
+     //EJERCICIO 3
+     class nodo{ 
+         String valor;
+         nodo siguiente;
+         
+         public nodo(String valor){
+            this.valor = valor;
+            this.siguiente = null;
+         }            
+     }
+     
+     class pila{
+         nodo cima;
+         
+         public pila(){
+             cima = null;
+         }
+         
+         void apilar (String valor){
+             nodo nuevonodo = new nodo(valor);
+             nuevonodo.siguiente = cima;
+             cima = nuevonodo;
+         }
+         
+         public String desapilar(){
+             if (cima == null){
+                 return null;
+             }
+             String valor = cima.valor;
+             cima = cima.siguiente;
+             return valor;
+         }
+         
+         public boolean estavacia(){
+             return cima == null;
+         }
+     }
+     
     }
 }
  
