@@ -7,7 +7,7 @@ public class Recursividaad {
 
     public static void main(String[] args) {
         // EJERCICIO 1 
-       Scanner entrada = new Scanner(System.in);
+      /* Scanner entrada = new Scanner(System.in);
         
         int size = 0;
         while(true){ // VALIDACION POR SI EL USUARIO INGRESA UN TAMAÑO INVALIDO DEL ARREGLO 
@@ -42,15 +42,29 @@ public class Recursividaad {
        
     }
          public static int SumaArreglo(int[] arreglo, int indice) {
-        // Caso base: si el índice es menor que 0, significa que hemos terminado de sumar
+        // Caso base: si el indice es menor que 0, significa que hemos terminado de sumar
         if (indice < 0) {
             return 0;
         } else {
             // Caso recursivo: sumamos el elemento actual al resultado de sumar el resto
             return arreglo[indice] + SumaArreglo(arreglo, indice - 1);
         }
-    }   
+    }   */
       
-     
+      // EJERCICIO 2
       
-}
+      class nodo{
+          String palabra;
+          nodo siguiente;
+      
+      
+        public nodo(String palabra){
+          this.palabra = palabra;
+          this.siguiente = null;
+        }
+      }  
+      
+      
+      
+    }
+}  
