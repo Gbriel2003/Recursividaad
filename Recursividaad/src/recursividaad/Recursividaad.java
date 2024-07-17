@@ -157,7 +157,17 @@ public class Recursividaad {
          public boolean estavacia(){
              return cima == null;
          }
+          
+         public void pilaInvertida(){ // FUNCION PARA REFLEJAR LOS VALORES DE LA PILA INVERTIDOS DE FORMA RECURSSIVA 
+             if (!estavacia()){
+                 String valor = desapilar();
+                 pilaInvertida();
+                 System.out.println(valor);
+             }
+         }  
      }
+     
+     
      
     }
 }
