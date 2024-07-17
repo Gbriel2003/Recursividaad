@@ -214,17 +214,17 @@ public class Recursividaad {
                entrada.next();
            }
        }
-       
-       // solicitar al usuario el valor para el exponente de la potencia
         int exponente = 0;
         while (true) {
             System.out.print("Ingrese el exponente para calcular la potencia (entero): ");
             if (entrada.hasNextInt()) {
                 exponente = entrada.nextInt();
-                break; // Valor válido ingresado, salir del bucle
+                if (exponente >= 0){
+                break;
+                }
             } else {
-                System.out.println("Entrada no válida. Por favor, ingrese un número entero.");
-                entrada.next(); // Descartar la entrada no válida
+                System.out.println("entrada invalida ingrese un numero valido (entero positivo o 0).");
+                entrada.next(); 
             }
         }
 
@@ -232,7 +232,7 @@ public class Recursividaad {
         long resultado = factorialypotencia(numerofactorial, base, exponente);
 
         // Imprimir el resultado
-        System.out.println("El resultado de " + numerofactorial + "! * " + base + "^" + exponente + " es: " + resultado);
+        System.out.println("el resultado de " + numerofactorial + "! * " + base + "^" + exponente + " es: " + resultado);
 
         entrada.close();
      }
